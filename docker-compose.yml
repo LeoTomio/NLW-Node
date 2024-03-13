@@ -1,0 +1,32 @@
+version: '3.7'
+networks:
+  minha_rede:
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    ports:
+      - '5435:5432'
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=polls
+    volumes:
+      - polls_pg_data:/bitnami/postgresql
+    networks:
+      - minha_rede
+
+  redis:
+    image: bitnami/redis:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '6379:6379'
+    volumes:
+      - 'polls_redis_data:/bitnami/redis/data'
+    networks:
+      - minha_rede
+
+volumes:
+  polls_pg_data:
+  polls_redis_data:
