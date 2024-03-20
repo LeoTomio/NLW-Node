@@ -12,3 +12,13 @@
 - IORedis
 - Typescript
 - Zod
+
+## Como rodar o projeto
+
+- Instalar o docker
+- docker compose up -d
+- npm install
+- npm migration
+- npm generate
+- npm run dev
+
