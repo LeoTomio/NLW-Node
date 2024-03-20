@@ -7,4 +7,5 @@
 - Typescript
 - Docker
 - Fastify
+- Fastify Cookie
 - Zod
