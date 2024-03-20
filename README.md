@@ -2,10 +2,13 @@
 
 ## Tecnologias utilizadas
 
-- Prisma
 - Node
-- Typescript
 - Docker
 - Fastify
-- Fastify Cookie
+- Fastify/Cookie
+- Fastify/Websocket
+- Prisma
+- Redis
+- IORedis
+- Typescript
 - Zod
